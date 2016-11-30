@@ -55,9 +55,43 @@ sink = ['bowl', 'plate', 'cup']
 for dish in list(sink):
 	print('Putting {} in the dishwasher'.format(dish))
 	sink.remove(dish)
+print(" ")
 
+# While loops
+import random
 
+dirty = True 
+scrub_count = 0
 
+while(dirty):
+
+	scrub_count += 1
+	print('Scrub the pan: {}'.format(scrub_count))
+
+	print('Rinse & check if the pan is clean')
+
+	if not random.randint(0,9):
+		print('All clean!')
+		dirty = False
+	else:
+		print('Still dirty...')
+print(" ")
+
+#  Break a loop
+import random
+
+dishwasher = ['plate', 'bowl', 'cup', 'knife', 'fork',
+			 'spoon', 'plate', 'spoon', 'bowl', 'cup',
+			 'knife', 'cup', 'cup', 'fork', 'bowl', 
+			 'fork', 'plate', 'cup', 'spoon', 'knife']
+
+for dish in list(dishwasher):
+	if not random.randint(0, 19):
+		print('Out of space!')
+		break
+	else:
+		print('Putting {} in the cabinet'.format(dish))
+		dishwasher.remove(dish)
 
 
 
